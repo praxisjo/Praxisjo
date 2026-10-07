@@ -101,7 +101,7 @@
             <nav class="hidden md:flex items-center space-x-6 text-xs font-semibold uppercase tracking-wider text-slate-300">
                 <a href="#page-2" class="hover:text-gold-300 transition-colors">Foundation</a>
                 <a href="#page-3" class="hover:text-gold-300 transition-colors">Services</a>
-                <a href="#page-4" class="hover:text-gold-300 transition-colors">Who We Serve</a>
+                <a href="#page-4" class="hover:text-gold-300 transition-colors">Who I Serve</a>
                 <a href="#page-5" class="hover:text-gold-300 transition-colors">Assessment</a>
             </nav>
 
@@ -302,14 +302,14 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- PAGE 4: WHO WE SERVE                        -->
+    <!-- PAGE 4: WHO I SERVE                        -->
     <!-- ========================================== -->
     <section id="page-4" class="py-24 bg-obsidian-900/60 border-y border-gold-500/15 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             
             <div class="text-center max-w-xl mx-auto mb-14">
                 <span class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold block mb-1">Page 04 &bull; Target Profile</span>
-                <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Who We Serve</h2>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Who I Serve</h2>
                 <div class="w-16 h-0.5 bg-gold-400/50 mx-auto mt-4"></div>
             </div>
 
@@ -531,7 +531,7 @@
                 // Web3Forms payload for instant email delivery
                 const emailPayload = {
                     access_key: '72aef9cc-7524-41e0-8ef7-f83de4bd2611',
-                    subject: `New PRAXIS Assessment: companyName({fullName})`,
+                    subject: `New PRAXIS Assessment: ${companyName} (${fullName})`,
                     from_name: 'PRAXIS Web Portal',
                     Client_Name: fullName,
                     Company: companyName,
@@ -614,4 +614,3 @@
     </script>
 </body>
 </html>
-

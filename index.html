@@ -21,16 +21,12 @@
                             400: '#d4a85a',
                             500: '#c59339',
                             600: '#ab772d',
-                            700: '#895726',
-                            800: '#714624',
-                            900: '#5f3a22',
                         },
                         obsidian: {
-                            950: '#06090e',
-                            900: '#0b1019',
-                            850: '#101724',
-                            800: '#162032',
-                            700: '#1f2d45',
+                            950: '#070a0f',
+                            900: '#0d131c',
+                            850: '#131b28',
+                            800: '#1b2638',
                         }
                     },
                     fontFamily: {
@@ -42,857 +38,370 @@
         }
     </script>
     
-    <!-- Fonts & Font Awesome Icons -->
+    <!-- Typography & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #06090e;
+            background-color: #070a0f;
             color: #f1f5f9;
             overflow-x: hidden;
         }
 
         .gold-gradient-text {
-            background: linear-gradient(135deg, #faebd0 0%, #e5be75 35%, #c59339 70%, #996e27 100%);
+            background: linear-gradient(135deg, #faebd0 0%, #dfc285 45%, #c59339 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .gold-card {
-            background: radial-gradient(circle at top left, rgba(212, 168, 90, 0.08), transparent 60%),
-                        linear-gradient(180deg, rgba(16, 23, 36, 0.9) 0%, rgba(11, 16, 25, 0.95) 100%);
-            border: 1px solid rgba(212, 168, 90, 0.22);
-            backdrop-filter: blur(12px);
-            transition: all 0.3s ease;
+        .card-surface {
+            background: rgba(13, 19, 28, 0.7);
+            border: 1px solid rgba(212, 168, 90, 0.16);
+            backdrop-filter: blur(14px);
+            transition: all 0.25s ease;
         }
 
-        .gold-card:hover {
-            border-color: rgba(229, 190, 117, 0.5);
-            box-shadow: 0 12px 35px -10px rgba(197, 147, 57, 0.25);
+        .card-surface:hover {
+            border-color: rgba(212, 168, 90, 0.38);
             transform: translateY(-2px);
         }
 
         .subtle-grid {
-            background-image: radial-gradient(rgba(212, 168, 90, 0.12) 1px, transparent 1px);
-            background-size: 32px 32px;
-        }
-
-        @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 15px rgba(212, 168, 90, 0.25); }
-            50% { box-shadow: 0 0 35px rgba(212, 168, 90, 0.55); }
-        }
-
-        .glow-gold {
-            animation: pulseGlow 4s infinite ease-in-out;
+            background-image: radial-gradient(rgba(212, 168, 90, 0.08) 1px, transparent 1px);
+            background-size: 28px 28px;
         }
 
         .custom-radio:checked + label {
             border-color: #d4a85a;
-            background: rgba(212, 168, 90, 0.15);
+            background: rgba(212, 168, 90, 0.12);
             color: #ffffff;
-            box-shadow: 0 0 12px rgba(212, 168, 90, 0.2);
         }
     </style>
 </head>
 <body class="selection:bg-gold-500 selection:text-obsidian-950">
 
-    <header id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-obsidian-950/90 backdrop-blur-md border-b border-gold-500/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                
-                <!-- Primary Brand Identity (Emblem + Wordmark) -->
-                <a href="#" class="flex items-center gap-3.5 group">
-                    <div class="relative w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-lg overflow-hidden border border-gold-500/40 shadow-lg group-hover:border-gold-300 transition-all">
-                        <img src="https://i.postimg.cc/m2yBQFxB/IMG-9339.jpg" alt="PRAXIS Logo" class="w-full h-full object-cover">
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="text-xl sm:text-2xl font-bold tracking-widest text-white font-serif uppercase group-hover:text-gold-300 transition-colors leading-none">PRAXIS</span>
-                        <span class="text-[9px] tracking-[0.38em] text-gold-400 uppercase font-semibold mt-1">Consulting</span>
-                    </div>
-                </a>
-
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-300">
-                    <a href="#about" class="hover:text-gold-300 transition-colors">Philosophy</a>
-                    <a href="#services" class="hover:text-gold-300 transition-colors">Services</a>
-                    <a href="#track-record" class="hover:text-gold-300 transition-colors">Track Record</a>
-                    <a href="#methodology" class="hover:text-gold-300 transition-colors">How We Work</a>
-                    <a href="#engagement" class="hover:text-gold-300 transition-colors">Engagements</a>
-                    <a href="#assessment" class="hover:text-gold-300 transition-colors">Assessment</a>
-                </nav>
-
-                <!-- Navigation CTAs & Quick WhatsApp -->
-                <div class="hidden sm:flex items-center space-x-4">
-                    <a href="https://wa.me/962775520081" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-xs font-semibold text-emerald-400 hover:text-emerald-300 border border-emerald-500/30 px-3.5 py-2 rounded-lg bg-emerald-950/30 transition-all hover:bg-emerald-900/40">
-                        <i class="fa-brands fa-whatsapp text-sm"></i>
-                        <span>+962 77 552 0081</span>
-                    </a>
-                    <a href="#assessment" class="text-xs uppercase tracking-wider font-bold px-5 py-2.5 rounded-lg bg-gradient-to-r from-gold-500 to-gold-600 text-obsidian-950 hover:brightness-110 shadow-md shadow-gold-500/20 active:scale-95 transition-all">
-                        Book Assessment
-                    </a>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-obsidian-950/85 backdrop-blur-md border-b border-gold-500/15">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 py-3.5 flex items-center justify-between">
+            
+            <!-- Brand Identity -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg overflow-hidden border border-gold-500/30 shrink-0">
+                    <img src="https://i.postimg.cc/m2yBQFxB/IMG-9339.jpg" alt="PRAXIS Logo" class="w-full h-full object-cover">
                 </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold tracking-widest text-white font-serif uppercase leading-none">PRAXIS</span>
+                    <span class="text-[9px] tracking-[0.35em] text-gold-400 uppercase font-semibold mt-1">Consulting</span>
+                </div>
+            </a>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-toggle" aria-label="Toggle menu" class="lg:hidden text-gold-400 p-2 focus:outline-none">
-                    <i class="fa-solid fa-bars-staggered text-2xl" id="nav-icon"></i>
-                </button>
-            </div>
-        </div>
+            <!-- Quick Links -->
+            <nav class="hidden md:flex items-center space-x-7 text-xs font-semibold uppercase tracking-wider text-slate-300">
+                <a href="#services" class="hover:text-gold-300 transition-colors">Services</a>
+                <a href="#track-record" class="hover:text-gold-300 transition-colors">Track Record</a>
+                <a href="#engagement" class="hover:text-gold-300 transition-colors">Engagements</a>
+                <a href="#assessment" class="hover:text-gold-300 transition-colors">Assessment</a>
+            </nav>
 
-        <!-- Mobile Drawer -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-obsidian-900 border-b border-gold-500/20 px-6 py-6 space-y-4">
-            <a href="#about" class="block text-slate-300 hover:text-gold-400 py-1 mobile-link">Philosophy</a>
-            <a href="#services" class="block text-slate-300 hover:text-gold-400 py-1 mobile-link">Services</a>
-            <a href="#track-record" class="block text-slate-300 hover:text-gold-400 py-1 mobile-link">Track Record</a>
-            <a href="#methodology" class="block text-slate-300 hover:text-gold-400 py-1 mobile-link">How We Work</a>
-            <a href="#engagement" class="block text-slate-300 hover:text-gold-400 py-1 mobile-link">Engagements</a>
-            <a href="#assessment" class="block text-slate-300 hover:text-gold-400 py-1 mobile-link">Client Assessment</a>
-            <div class="pt-4 border-t border-slate-800 flex flex-col gap-3">
-                <a href="https://wa.me/962775520081" target="_blank" class="w-full text-center py-2.5 rounded-lg border border-emerald-500/40 text-emerald-400 bg-emerald-950/20 text-sm font-semibold">
-                    <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Direct
+            <!-- Direct Actions -->
+            <div class="flex items-center space-x-3">
+                <a href="https://wa.me/962775520081" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center space-x-2 text-xs font-semibold text-emerald-400 border border-emerald-500/30 px-3 py-2 rounded-lg bg-emerald-950/30 hover:bg-emerald-900/40 transition-colors">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>+962 77 552 0081</span>
                 </a>
-                <a href="#assessment" class="w-full text-center py-3 rounded-lg bg-gold-500 text-obsidian-950 font-bold text-xs uppercase tracking-wider">
-                    Start Initial Assessment
+                <a href="#assessment" class="text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-lg bg-gradient-to-r from-gold-400 to-gold-500 text-obsidian-950 hover:brightness-105 transition-all">
+                    Start Intake
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="relative pt-36 pb-24 md:pt-48 md:pb-36 overflow-hidden subtle-grid">
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[550px] bg-gradient-to-b from-gold-500/15 via-gold-600/5 to-transparent rounded-full blur-[130px] pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+    <section class="relative pt-32 pb-16 md:pt-40 md:pb-24 subtle-grid text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
             
-            <!-- Global Geographic Scope Badge -->
-            <div class="inline-flex items-center justify-center gap-2.5 px-5 py-2.5 rounded-full bg-obsidian-900/90 border border-gold-400/30 text-xs text-gold-200 mb-8 shadow-inner">
-                <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping mr-0.5"></span>
-                <span class="font-medium">Available to serve countries like <strong class="text-white font-semibold">KSA</strong>, the <strong class="text-white font-semibold">United Arab Emirates</strong>, and <strong class="text-white font-semibold">globally</strong></span>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-obsidian-900 border border-gold-400/25 text-[11px] text-gold-300 mb-6">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Active across Jordan, KSA, the UAE & globally</span>
             </div>
 
-            <!-- Hero Headline -->
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-5xl mx-auto leading-[1.12]">
-                Practical consulting for businesses that <span class="gold-gradient-text font-serif italic">want to run better.</span>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                Practical consulting for companies that <span class="gold-gradient-text font-serif italic">need to run better.</span>
             </h1>
 
-            <!-- Hero Subtitle -->
-            <p class="mt-7 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
-                We help owners and executives structure operations, clarify accountability, streamline workflows, and make sound commercial decisions with actionable execution plans—not reports that stay in a drawer.
+            <p class="mt-5 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+                We structure operations, clarify team accountability, and streamline workflows with clear execution plans—not 50-page reports that end up in a drawer.
             </p>
 
-            <!-- Hero Action Buttons -->
-            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#assessment" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 hover:from-gold-300 hover:to-gold-500 text-obsidian-950 font-bold uppercase tracking-wider text-xs shadow-xl shadow-gold-500/20 active:scale-95 transition-all">
-                    Request Free Initial Assessment
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a href="#assessment" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-gold-400 to-gold-600 text-obsidian-950 font-bold uppercase tracking-wider text-xs shadow-lg shadow-gold-500/20 hover:brightness-110 transition-all">
+                    Request Free Assessment
                 </a>
-                <a href="#track-record" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-obsidian-900 hover:bg-obsidian-850 text-slate-200 border border-gold-500/30 font-semibold text-xs tracking-wider uppercase transition-all flex items-center justify-center space-x-2">
-                    <span>Proven Enterprise Track Record</span>
-                    <i class="fa-solid fa-arrow-right text-gold-400 text-xs"></i>
+                <a href="https://wa.me/962775520081" target="_blank" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-obsidian-900 border border-slate-700 hover:border-gold-500/40 text-slate-200 text-xs font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+                    <span>Chat on WhatsApp</span>
                 </a>
             </div>
 
-            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto text-left">
-                <div class="p-6 rounded-2xl bg-obsidian-900/60 border border-gold-500/15 backdrop-blur-sm">
-                    <p class="text-3xl font-extrabold text-gold-400 font-serif">12 / 12</p>
-                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mt-1">Governorates Scaled in Jordan</p>
-                    <p class="text-[11px] text-slate-500 mt-2">End-to-end SOPs & nationwide operations architecture.</p>
+            <div class="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+                <div class="p-5 rounded-xl card-surface">
+                    <p class="text-2xl font-extrabold text-gold-400 font-serif">12 / 12</p>
+                    <p class="text-xs font-semibold text-slate-300 mt-1">Governorates Scaled in Jordan</p>
+                    <p class="text-[11px] text-slate-400 mt-1">Full operational architecture and real-time field SOPs.</p>
                 </div>
-                <div class="p-6 rounded-2xl bg-obsidian-900/60 border border-gold-500/15 backdrop-blur-sm">
-                    <p class="text-3xl font-extrabold text-gold-400 font-serif">4 Core</p>
-                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mt-1">Consulting Pillars</p>
-                    <p class="text-[11px] text-slate-500 mt-2">Operations, Sales, Marketing & Business Development.</p>
+                <div class="p-5 rounded-xl card-surface">
+                    <p class="text-2xl font-extrabold text-gold-400 font-serif">2-Week</p>
+                    <p class="text-xs font-semibold text-slate-300 mt-1">Operational Audit Sprint</p>
+                    <p class="text-[11px] text-slate-400 mt-1">Quick diagnosis, bottleneck removal, and roadmaps.</p>
                 </div>
-                <div class="p-6 rounded-2xl bg-obsidian-900/60 border border-gold-500/15 backdrop-blur-sm">
-                    <p class="text-3xl font-extrabold text-gold-400 font-serif">2-Week</p>
-                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mt-1">Operational Audit Sprint</p>
-                    <p class="text-[11px] text-slate-500 mt-2">Clear diagnosis, bottleneck identification & roadmap.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-obsidian-900/60 border border-gold-500/15 backdrop-blur-sm">
-                    <p class="text-3xl font-extrabold text-gold-400 font-serif">Global</p>
-                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mt-1">International Reach</p>
-                    <p class="text-[11px] text-slate-500 mt-2">Serving clients across KSA, the UAE, and worldwide.</p>
+                <div class="p-5 rounded-xl card-surface">
+                    <p class="text-2xl font-extrabold text-gold-400 font-serif">Hands-On</p>
+                    <p class="text-xs font-semibold text-slate-300 mt-1">Implementation Support</p>
+                    <p class="text-[11px] text-slate-400 mt-1">Direct advisory working alongside leadership.</p>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <section id="about" class="py-24 bg-obsidian-900/40 border-y border-gold-500/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <div class="lg:col-span-5">
-                    <div class="inline-block text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-3">01 · Who We Are</div>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-6">
-                        Why <span class="gold-gradient-text font-serif">“Praxis”?</span>
-                    </h2>
-                    <div class="p-6 rounded-2xl bg-gold-500/5 border-l-4 border-gold-500 mb-6">
-                        <p class="text-base text-gold-200/90 italic font-serif leading-relaxed">
-                            “Praxis means putting knowledge into practice. It is how we work: findings that lead to immediate action, not theoretical reports that stay locked in a drawer.”
-                        </p>
-                    </div>
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                        PRAXIS Consulting is built for owner-managed businesses, expanding startups, and established enterprises across the Middle East. When companies scale rapidly, operational structures often grow informally, creating accountability gaps, bottlenecks, and clouded revenue insights.
-                    </p>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        We engineer the operational clarity, standard operating procedures (SOPs), KPI scorecards, and commercial alignment your leadership requires to achieve sustainable margins.
-                    </p>
-                </div>
-
-                <div class="lg:col-span-7">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="gold-card p-7 rounded-2xl">
-                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-xl mb-5">
-                                <i class="fa-solid fa-users-gear"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-white mb-2">Who We Work With</h3>
-                            <ul class="space-y-3 text-xs sm:text-sm text-slate-400">
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-check text-gold-400 mt-1 mr-2.5 text-xs shrink-0"></i>
-                                    <span>Small and growing regional businesses preparing for scale</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-check text-gold-400 mt-1 mr-2.5 text-xs shrink-0"></i>
-                                    <span>Owner-managed companies whose processes grew informally</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-check text-gold-400 mt-1 mr-2.5 text-xs shrink-0"></i>
-                                    <span>Leadership teams needing clarity on roles, workflow and targets</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="gold-card p-7 rounded-2xl">
-                            <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-xl mb-5">
-                                <i class="fa-solid fa-bullseye"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-white mb-2">Primary Core Focus</h3>
-                            <div class="space-y-4">
-                                <div>
-                                    <span class="text-xs uppercase font-bold text-gold-300">Operations Mastery</span>
-                                    <p class="text-xs text-slate-400 mt-0.5">Audits, daily workflows, standardized SOPs, organizational roles, and KPI performance tracking.</p>
-                                </div>
-                                <div>
-                                    <span class="text-xs uppercase font-bold text-gold-300">Commercial Strategy</span>
-                                    <p class="text-xs text-slate-400 mt-0.5">Sales-process review, pipeline governance, market intelligence, and executive planning.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <div class="inline-block text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-2">02 · Services</div>
-                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">Built around how your operation actually runs.</h2>
-                <p class="mt-4 text-slate-400 text-base">We bridge high-level corporate strategy with concrete on-the-ground execution.</p>
-            </div>
-
-            <div class="space-y-12">
-                <!-- Operations Pillar -->
-                <div>
-                    <div class="flex items-center space-x-3 mb-6">
-                        <span class="w-3 h-3 rounded-full bg-gold-400"></span>
-                        <h3 class="text-xl font-bold tracking-wide uppercase text-white font-serif">Operations Consulting Core</h3>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div class="gold-card p-6 rounded-2xl">
-                            <span class="text-2xl font-serif font-bold text-gold-400">01</span>
-                            <h4 class="text-base font-bold text-white mt-3 mb-2">Operational Audit</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">A structured examination of how work genuinely flows day-to-day. We identify friction, bottlenecks, and waste, concluding in an actionable report.</p>
-                        </div>
-
-                        <div class="gold-card p-6 rounded-2xl">
-                            <span class="text-2xl font-serif font-bold text-gold-400">02</span>
-                            <h4 class="text-base font-bold text-white mt-3 mb-2">Workflows & SOPs</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">Documenting, simplifying, and standardizing the procedures your team repeats daily. Eliminating tribal knowledge so teams operate with consistency.</p>
-                        </div>
-
-                        <div class="gold-card p-6 rounded-2xl">
-                            <span class="text-2xl font-serif font-bold text-gold-400">03</span>
-                            <h4 class="text-base font-bold text-white mt-3 mb-2">Roles & Structure</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">Defining crystal-clear ownership, job scopes, and reporting hierarchies so crucial tasks never slip through the cracks between cross-functional teams.</p>
-                        </div>
-
-                        <div class="gold-card p-6 rounded-2xl">
-                            <span class="text-2xl font-serif font-bold text-gold-400">04</span>
-                            <h4 class="text-base font-bold text-white mt-3 mb-2">KPIs & Performance</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">Pinpointing the vital metrics that matter. We uncover honest performance gaps and install a clean, reliable scorecard framework to monitor accountability.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Commercial & Strategy Pillar -->
-                <div>
-                    <div class="flex items-center space-x-3 mb-6">
-                        <span class="w-3 h-3 rounded-full bg-slate-500"></span>
-                        <h3 class="text-xl font-bold tracking-wide uppercase text-white font-serif">Commercial & Strategic Consulting</h3>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div class="p-6 rounded-2xl bg-obsidian-900 border border-slate-800 hover:border-gold-500/30 transition-all">
-                            <div class="text-gold-400 text-lg mb-3"><i class="fa-solid fa-chart-line"></i></div>
-                            <h4 class="text-sm font-bold text-white mb-2">Sales Consulting</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">Comprehensive review of your sales pipeline, conversion stages, KPI incentives, and practical sales team training.</p>
-                        </div>
-
-                        <div class="p-6 rounded-2xl bg-obsidian-900 border border-slate-800 hover:border-gold-500/30 transition-all">
-                            <div class="text-gold-400 text-lg mb-3"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                            <h4 class="text-sm font-bold text-white mb-2">Marketing & Market Studies</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">Rigorous target audience research and field data collection that guide brand positioning and high-ROI acquisition initiatives.</p>
-                        </div>
-
-                        <div class="p-6 rounded-2xl bg-obsidian-900 border border-slate-800 hover:border-gold-500/30 transition-all">
-                            <div class="text-gold-400 text-lg mb-3"><i class="fa-solid fa-compass"></i></div>
-                            <h4 class="text-sm font-bold text-white mb-2">Strategic & Business Planning</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">Developing an unambiguous commercial direction, resource plan, and milestone roadmap to navigate multi-market expansion.</p>
-                        </div>
-
-                        <div class="p-6 rounded-2xl bg-obsidian-900 border border-slate-800 hover:border-gold-500/30 transition-all">
-                            <div class="text-gold-400 text-lg mb-3"><i class="fa-solid fa-shield-halved"></i></div>
-                            <h4 class="text-sm font-bold text-white mb-2">Competitive Intelligence</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">In-depth competitor analysis, price positioning evaluations, and regional market intelligence before capital deployment.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="track-record" class="py-24 bg-gradient-to-b from-obsidian-900/60 to-obsidian-950 border-y border-gold-500/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" class="py-16 bg-obsidian-900/30 border-y border-gold-500/10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
             
-            <div class="max-w-3xl mb-14">
-                <div class="inline-block text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-2">Proven Track Record</div>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                    From Greenfield Architecture to <span class="gold-gradient-text font-serif">Nationwide Scale.</span>
-                </h2>
-                <p class="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-                    Our consulting principles are battle-tested in complex, high-velocity environments. As early Operations Manager and Lead Consultant at <span class="text-gold-300 font-semibold">BackUp</span>, our leadership architected daily operational frameworks, SOPs, and cross-functional coordination from day zero.
-                </p>
+            <div class="max-w-xl mx-auto text-center mb-12">
+                <span class="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold">What We Do</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Three Core Areas of Focus</h2>
             </div>
 
-            <!-- Balanced Track Record Showcase Card -->
-            <div class="gold-card p-8 sm:p-10 rounded-3xl relative overflow-hidden">
-                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-gold-500/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div class="lg:col-span-8">
-                        <div class="inline-flex items-center space-x-2 text-xs font-semibold px-3 py-1 rounded-full bg-gold-500/10 text-gold-300 border border-gold-500/20 mb-4">
-                            <i class="fa-solid fa-flag-checkered text-[10px]"></i>
-                            <span>Enterprise Operations Milestone</span>
+                <!-- Pillar 1 -->
+                <div class="p-7 rounded-2xl card-surface flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-gears"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-white">Nationwide Infrastructure Across All 12 Governorates</h3>
-                        <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-                            Built standard operating procedures and real-time coordination systems for Jordan's flagship on-demand staffing and field data collection provider. The operational architecture supported instant mobilization of vetted talent from Amman to rural municipalities with zero loss in visibility.
+                        <h3 class="text-lg font-bold text-white mb-2">Operations & SOPs</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                            Identify friction points, eliminate tribal knowledge, and document standardized processes so your team operates cleanly every single day.
                         </p>
-
-                        <div class="mt-6 pt-6 border-t border-slate-800 grid grid-cols-2 sm:grid-cols-4 gap-4">
-                            <div>
-                                <span class="block text-xs font-bold text-gold-400 uppercase">Operations</span>
-                                <span class="text-xs text-slate-400">SOPs, dispatch protocols & real-time live reporting</span>
-                            </div>
-                            <div>
-                                <span class="block text-xs font-bold text-gold-400 uppercase">Sales Strategy</span>
-                                <span class="text-xs text-slate-400">Service structuring & multi-tier client proposals</span>
-                            </div>
-                            <div>
-                                <span class="block text-xs font-bold text-gold-400 uppercase">Marketing</span>
-                                <span class="text-xs text-slate-400">B2B positioning & brand activation playbooks</span>
-                            </div>
-                            <div>
-                                <span class="block text-xs font-bold text-gold-400 uppercase">Business Dev</span>
-                                <span class="text-xs text-slate-400">Strategic alliances with tier-1 enterprise accounts</span>
-                            </div>
-                        </div>
                     </div>
-
-                    <div class="lg:col-span-4 bg-obsidian-950/80 p-6 rounded-2xl border border-gold-500/20 text-center">
-                        <div class="w-16 h-16 mx-auto rounded-2xl bg-gold-500/10 flex items-center justify-center text-2xl text-gold-400 mb-3">
-                            <i class="fa-solid fa-map-location-dot"></i>
-                        </div>
-                        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold">Territory Coverage</span>
-                        <p class="text-2xl font-serif font-bold text-white mt-1">12 Governorates</p>
-                        <p class="text-xs text-slate-400 mt-2">Comprehensive standard operating procedures scaled and executed end-to-end.</p>
-                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-4 border-t border-slate-800">
+                        <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Operational diagnostic audits</li>
+                        <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Standard Operating Procedures (SOPs)</li>
+                        <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Roles & ownership mapping</li>
+                    </ul>
                 </div>
+
+                <!-- Pillar 2 -->
+                <div class="p-7 rounded-2xl card-surface flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Commercial Strategy</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                            Review your sales funnel, stage conversions, and pipeline governance to accelerate deals and build predictable revenue.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-4 border-t border-slate-800">
+                        <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Sales pipeline optimization</li>
+                        <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Practical team playbooks</li>
+                        <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Market & competitor analysis</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="p-7 rounded-2xl card-surface flex flex-col justify-between border-gold-400/40">
+                    <div>
+                        <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Performance & Retainers</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                            Ongoing fractional advisory for founders and executives who need monthly operational guidance and KPI accountability.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-4 border-t border-slate-800">
+                        <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Balanced KPI scorecards</li>
+                        <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Bi-weekly executive reviews</li>
+                        <li><i class="fa-solid fa-check text-gold-400 mr-2"></i> Growth milestone tracking</li>
+                    </ul>
+                </div>
+
             </div>
 
         </div>
     </section>
 
-    <section id="methodology" class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <div class="inline-block text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-2">03 · How We Work</div>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">A clear process, from first conversation to execution.</h2>
-                <p class="mt-4 text-slate-400 text-base">We eliminate ambiguity with a systematic 7-step consultative roadmap.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section id="track-record" class="py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 
-                <div class="p-6 rounded-2xl bg-obsidian-900/80 border border-slate-800 hover:border-gold-500/40 transition-all">
-                    <span class="inline-flex w-8 h-8 rounded-lg bg-gold-500/20 text-gold-300 items-center justify-center font-bold text-xs">1</span>
-                    <h4 class="text-base font-bold text-white mt-4 mb-2">Management Assessment</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Deep-dive discovery session to evaluate organizational hierarchy, operating challenges, and strategic objectives.</p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-obsidian-900/80 border border-slate-800 hover:border-gold-500/40 transition-all">
-                    <span class="inline-flex w-8 h-8 rounded-lg bg-gold-500/20 text-gold-300 items-center justify-center font-bold text-xs">2</span>
-                    <h4 class="text-base font-bold text-white mt-4 mb-2">Workflow & SOP Review</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Investigating actual procedures, documentation gaps, and manual handoffs across active operating departments.</p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-obsidian-900/80 border border-slate-800 hover:border-gold-500/40 transition-all">
-                    <span class="inline-flex w-8 h-8 rounded-lg bg-gold-500/20 text-gold-300 items-center justify-center font-bold text-xs">3</span>
-                    <h4 class="text-base font-bold text-white mt-4 mb-2">Roles & Responsibilities</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Isolating overlaps, ownership ambiguities, and redundant tasks so individual and team boundaries are crisp.</p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-obsidian-900/80 border border-slate-800 hover:border-gold-500/40 transition-all">
-                    <span class="inline-flex w-8 h-8 rounded-lg bg-gold-500/20 text-gold-300 items-center justify-center font-bold text-xs">4</span>
-                    <h4 class="text-base font-bold text-white mt-4 mb-2">KPIs & Performance Gaps</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Auditing leading vs lagging metrics and identifying where day-to-day output falls short of business targets.</p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-obsidian-900/80 border border-slate-800 hover:border-gold-500/40 transition-all">
-                    <span class="inline-flex w-8 h-8 rounded-lg bg-gold-500/20 text-gold-300 items-center justify-center font-bold text-xs">5</span>
-                    <h4 class="text-base font-bold text-white mt-4 mb-2">Findings & Priorities</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Documenting diagnostic discoveries and prioritizing high-impact optimizations that yield immediate quick wins.</p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-obsidian-900/80 border border-slate-800 hover:border-gold-500/40 transition-all">
-                    <span class="inline-flex w-8 h-8 rounded-lg bg-gold-500/20 text-gold-300 items-center justify-center font-bold text-xs">6</span>
-                    <h4 class="text-base font-bold text-white mt-4 mb-2">Audit Report & Action Plan</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Delivering a comprehensive executive report accompanied by an actionable, step-by-step implementation plan.</p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-obsidian-900/80 border border-slate-800 hover:border-gold-500/40 transition-all">
-                    <span class="inline-flex w-8 h-8 rounded-lg bg-gold-500/20 text-gold-300 items-center justify-center font-bold text-xs">7</span>
-                    <h4 class="text-base font-bold text-white mt-4 mb-2">Close-Out Alignment</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Executive debrief walking leadership through all findings, operational handover, and follow-on retainer options.</p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-gradient-to-br from-gold-500/10 to-obsidian-900 border border-gold-500/40 flex flex-col justify-between">
-                    <div>
-                        <span class="inline-block text-[10px] font-bold text-gold-400 uppercase tracking-widest">Entry Point</span>
-                        <h4 class="text-base font-bold text-white mt-2">Free Initial Assessment</h4>
-                        <p class="text-xs text-slate-300 mt-2">Discovery session to determine company size, bottlenecks, and scope prior to full engagement.</p>
-                    </div>
-                    <a href="#assessment" class="mt-4 text-xs font-bold text-gold-300 uppercase tracking-wider hover:underline flex items-center">
-                        Begin Intake <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="engagement" class="py-24 bg-obsidian-900/40 border-y border-gold-500/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <div class="inline-block text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-2">04 · Engagement</div>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Structured scopes tailored to your needs.</h2>
-                <p class="mt-4 text-slate-400 text-base">Select sprint engagements or long-term operational advisory retainers.</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Model 1: Operational Audit -->
-                <div class="gold-card p-8 rounded-3xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-6">
-                            <div>
-                                <span class="text-xs uppercase font-bold tracking-widest text-gold-400">Sprint Model</span>
-                                <h3 class="text-2xl font-bold text-white mt-1">Operational Audit</h3>
-                            </div>
-                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-gold-500/20 text-gold-300">Base: 2 Weeks</span>
+                <!-- Track Record Callout -->
+                <div class="lg:col-span-6 card-surface p-7 sm:p-8 rounded-2xl">
+                    <span class="text-xs uppercase tracking-wider text-gold-400 font-semibold block mb-2">Proven Track Record</span>
+                    <h3 class="text-2xl font-bold text-white">Tested in High-Velocity Scale</h3>
+                    <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                        As early Operations Manager and Lead Consultant at <strong class="text-white">BackUp</strong>, our leadership designed the operational SOPs and coordination frameworks that mobilized teams across all 12 Governorates in Jordan.
+                    </p>
+                    <div class="mt-5 pt-5 border-t border-slate-800 flex items-center gap-6">
+                        <div>
+                            <span class="text-xl font-bold text-gold-400 font-serif">12/12</span>
+                            <span class="block text-[11px] text-slate-400 uppercase">Governorates</span>
                         </div>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-6">Management interview session, workflow and SOP evaluation, KPI performance analysis, bottleneck identification, and practical roadmap.</p>
-                        
-                        <div class="space-y-3 pt-4 border-t border-slate-800/80 text-xs text-slate-300">
-                            <div class="flex items-center"><i class="fa-solid fa-check text-gold-400 mr-2.5"></i> Comprehensive process mapping</div>
-                            <div class="flex items-center"><i class="fa-solid fa-check text-gold-400 mr-2.5"></i> Bottleneck and waste discovery</div>
-                            <div class="flex items-center"><i class="fa-solid fa-check text-gold-400 mr-2.5"></i> Formal Audit Report & action steps</div>
+                        <div class="h-8 w-px bg-slate-800"></div>
+                        <div>
+                            <span class="text-xl font-bold text-gold-400 font-serif">Day 0</span>
+                            <span class="block text-[11px] text-slate-400 uppercase">Greenfield Architecture</span>
                         </div>
                     </div>
-
-                    <a href="#assessment" class="mt-8 block text-center py-3 rounded-xl bg-obsidian-950 hover:bg-obsidian-850 text-gold-300 border border-gold-500/30 text-xs font-bold uppercase tracking-wider transition-colors">
-                        Select Operational Audit
-                    </a>
                 </div>
 
-                <!-- Model 2: Sales Consulting -->
-                <div class="gold-card p-8 rounded-3xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-6">
-                            <div>
-                                <span class="text-xs uppercase font-bold tracking-widest text-gold-400">Commercial Sprint</span>
-                                <h3 class="text-2xl font-bold text-white mt-1">Sales Consulting</h3>
-                            </div>
-                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-gold-500/20 text-gold-300">2 – 3 Weeks</span>
+                <!-- Engagement Formats -->
+                <div id="engagement" class="lg:col-span-6 space-y-3">
+                    <div class="card-surface p-5 rounded-xl flex items-center justify-between">
+                        <div>
+                            <span class="text-xs uppercase font-bold text-gold-400">Sprint Model</span>
+                            <h4 class="text-sm font-bold text-white">2-Week Operational Audit</h4>
+                            <p class="text-[11px] text-slate-400">Deep-dive assessment, bottleneck diagnosis, and actionable fix roadmap.</p>
                         </div>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-6">Thorough inspection of your sales funnel, deal velocity, performance gaps, revised commercial playbook, KPI metrics, and practical team training.</p>
-                        
-                        <div class="space-y-3 pt-4 border-t border-slate-800/80 text-xs text-slate-300">
-                            <div class="flex items-center"><i class="fa-solid fa-check text-gold-400 mr-2.5"></i> End-to-end sales funnel review</div>
-                            <div class="flex items-center"><i class="fa-solid fa-check text-gold-400 mr-2.5"></i> Pipeline KPI framework setup</div>
-                            <div class="flex items-center"><i class="fa-solid fa-check text-gold-400 mr-2.5"></i> Targeted sales team training module</div>
-                        </div>
+                        <a href="#assessment" class="text-xs font-bold text-gold-400 hover:text-gold-300 shrink-0 ml-4">Select &rarr;</a>
                     </div>
 
-                    <a href="#assessment" class="mt-8 block text-center py-3 rounded-xl bg-obsidian-950 hover:bg-obsidian-850 text-gold-300 border border-gold-500/30 text-xs font-bold uppercase tracking-wider transition-colors">
-                        Select Sales Consulting
-                    </a>
-                </div>
-
-                <!-- Model 3: Monthly Retainer -->
-                <div class="p-8 rounded-3xl bg-gradient-to-b from-obsidian-850 to-obsidian-950 border-2 border-gold-400 flex flex-col justify-between relative shadow-2xl shadow-gold-500/10">
-                    <div class="absolute -top-3 right-6 bg-gradient-to-r from-gold-500 to-gold-600 text-obsidian-950 text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full">
-                        Recommended for Growth
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-start mb-6">
-                            <div>
-                                <span class="text-xs uppercase font-bold tracking-widest text-gold-400">Ongoing Advisory</span>
-                                <h3 class="text-2xl font-bold text-white mt-1">Monthly Retainer</h3>
-                            </div>
-                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-gold-500/20 text-gold-300">3 Tiers</span>
+                    <div class="card-surface p-5 rounded-xl flex items-center justify-between">
+                        <div>
+                            <span class="text-xs uppercase font-bold text-gold-400">Commercial Sprint</span>
+                            <h4 class="text-sm font-bold text-white">Sales & Pipeline Review</h4>
+                            <p class="text-[11px] text-slate-400">Funnel audit, KPI metrics, and practical commercial playbook.</p>
                         </div>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-6">Continuous operational governance, implementation oversight, and recurring executive reviews.</p>
-                        
-                        <div class="space-y-4 pt-4 border-t border-slate-800 text-xs">
-                            <div>
-                                <strong class="text-gold-300 block">Basic:</strong>
-                                <span class="text-slate-400 text-[11px]">Periodic review session and core indicators monitoring.</span>
-                            </div>
-                            <div>
-                                <strong class="text-gold-300 block">Professional:</strong>
-                                <span class="text-slate-400 text-[11px]">In-depth KPI tracking, recurring leadership sessions & guidance.</span>
-                            </div>
-                            <div>
-                                <strong class="text-gold-300 block">Premium:</strong>
-                                <span class="text-slate-400 text-[11px]">Embedded support, implementation follow-up & executive direction.</span>
-                            </div>
-                        </div>
+                        <a href="#assessment" class="text-xs font-bold text-gold-400 hover:text-gold-300 shrink-0 ml-4">Select &rarr;</a>
                     </div>
 
-                    <a href="#assessment" class="mt-8 block text-center py-3 rounded-xl bg-gradient-to-r from-gold-400 to-gold-600 text-obsidian-950 text-xs font-bold uppercase tracking-wider shadow-lg hover:brightness-110 transition-all">
-                        Discuss Retainer Options
-                    </a>
+                    <div class="card-surface p-5 rounded-xl flex items-center justify-between border-gold-400/40">
+                        <div>
+                            <span class="text-xs uppercase font-bold text-gold-400">Advisory Retainer</span>
+                            <h4 class="text-sm font-bold text-white">Monthly Fractional Operations</h4>
+                            <p class="text-[11px] text-slate-400">Continuous governance, monthly reviews, and strategic oversight.</p>
+                        </div>
+                        <a href="#assessment" class="text-xs font-bold text-gold-400 hover:text-gold-300 shrink-0 ml-4">Select &rarr;</a>
+                    </div>
                 </div>
 
-            </div>
-
-            <!-- Boundaries and Inclusions Notice -->
-            <div class="mt-12 p-6 rounded-2xl bg-obsidian-950/80 border border-slate-800 grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
-                <div>
-                    <h4 class="font-bold text-gold-300 uppercase tracking-wider mb-2"><i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i>Included in Scope</h4>
-                    <p class="text-slate-400">Stakeholder interviews & analysis, review of client-provided operating documents, concrete written reports, and agreed operational frameworks.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-slate-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-circle-xmark mr-2 text-rose-400"></i>Excluded Unless Specifically Agreed</h4>
-                    <p class="text-slate-500">Day-to-day execution for client tasks, recruitment activities, specialist legal counsel, accounting, financial tax audits, or statutory certification.</p>
-                </div>
             </div>
 
         </div>
     </section>
 
-    <section id="assessment" class="py-24 relative subtle-grid">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <div class="inline-block text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-2">Direct Intake Form</div>
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Free Consultation & Initial Assessment</h2>
-                <p class="mt-3 text-slate-400 text-sm sm:text-base">Complete this quick assessment to evaluate your scope and organizational complexity. All submissions receive an executive follow-up within 24 business hours.</p>
+    <section id="assessment" class="py-16 bg-obsidian-900/50 border-t border-gold-500/10 subtle-grid">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center mb-8">
+                <span class="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold">Get Started</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Free Initial Assessment</h2>
+                <p class="text-xs sm:text-sm text-slate-400 mt-2">Tell us about your business. We'll review your situation and get back to you within 24 hours.</p>
             </div>
 
-            <!-- Form Container Card -->
-            <div class="gold-card p-6 sm:p-10 rounded-3xl shadow-2xl relative">
+            <div class="card-surface p-6 sm:p-8 rounded-2xl shadow-xl">
                 
-                <div id="assessment-success" class="hidden mb-8 p-5 rounded-2xl bg-emerald-950/80 border border-emerald-500 text-emerald-200 text-sm flex items-start space-x-3">
-                    <i class="fa-solid fa-circle-check text-emerald-400 text-xl mt-0.5"></i>
-                    <div>
-                        <strong class="font-bold block text-white">Assessment Request Received!</strong>
-                        <span>Thank you. Your operational briefing has been logged. We will reach out during your preferred window, or you can message us directly on WhatsApp below.</span>
-                    </div>
+                <div id="assessment-success" class="hidden mb-6 p-4 rounded-xl bg-emerald-950/80 border border-emerald-500 text-emerald-200 text-xs">
+                    <strong class="font-bold text-white block mb-1">Assessment Received!</strong>
+                    <span>Your operational briefing has been saved to our inbox and Google Sheet. We will reach out shortly.</span>
                 </div>
 
-                <form id="praxis-intake-form" class="space-y-8">
+                <form id="praxis-intake-form" class="space-y-5">
                     
-                    <!-- Section 1: Contact Details -->
-                    <div class="border-b border-slate-800 pb-8 space-y-6">
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-gold-400 flex items-center">
-                            <span class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-300 flex items-center justify-center text-xs mr-2">1</span>
-                            Contact & Company Details
-                        </h3>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                            <div>
-                                <label for="fullName" class="block text-xs font-semibold text-slate-300 mb-2">Full Name *</label>
-                                <input type="text" id="fullName" required placeholder="e.g. Tariq Al-Hassan" class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400 text-sm transition-colors">
-                            </div>
-                            <div>
-                                <label for="companyName" class="block text-xs font-semibold text-slate-300 mb-2">Company Name *</label>
-                                <input type="text" id="companyName" required placeholder="e.g. Apex Holdings Ltd." class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400 text-sm transition-colors">
-                            </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="fullName" class="block text-xs font-medium text-slate-300 mb-1">Full Name *</label>
+                            <input type="text" id="fullName" required placeholder="e.g. Tariq Al-Hassan" class="w-full px-3.5 py-2.5 rounded-lg bg-obsidian-950 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-gold-400">
                         </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                            <div>
-                                <label for="phoneWhatsApp" class="block text-xs font-semibold text-slate-300 mb-2">Phone / WhatsApp Number *</label>
-                                <input type="tel" id="phoneWhatsApp" required placeholder="+962 7X XXX XXXX" class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400 text-sm transition-colors">
-                            </div>
-                            <div>
-                                <label for="emailAddress" class="block text-xs font-semibold text-slate-300 mb-2">Business Email Address *</label>
-                                <input type="email" id="emailAddress" required placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400 text-sm transition-colors">
-                            </div>
+                        <div>
+                            <label for="companyName" class="block text-xs font-medium text-slate-300 mb-1">Company Name *</label>
+                            <input type="text" id="companyName" required placeholder="e.g. Apex Holdings" class="w-full px-3.5 py-2.5 rounded-lg bg-obsidian-950 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-gold-400">
                         </div>
                     </div>
 
-                    <!-- Section 2: Organizational Scope -->
-                    <div class="border-b border-slate-800 pb-8 space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <h3 class="text-sm font-bold uppercase tracking-wider text-gold-400 flex items-center">
-                                <span class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-300 flex items-center justify-center text-xs mr-2">2</span>
-                                Organizational Scope & Complexity
-                            </h3>
-                            <p class="text-xs text-slate-400 mt-1">Helps evaluate headcount, operational tiers, and procedural load.</p>
+                            <label for="phoneWhatsApp" class="block text-xs font-medium text-slate-300 mb-1">Phone / WhatsApp *</label>
+                            <input type="tel" id="phoneWhatsApp" required placeholder="+962 7X XXX XXXX" class="w-full px-3.5 py-2.5 rounded-lg bg-obsidian-950 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-gold-400">
                         </div>
-
                         <div>
-                            <label class="block text-xs font-semibold text-slate-300 mb-3">How many employees / team members are in your company? *</label>
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                                <div>
-                                    <input type="radio" name="teamSize" id="size-1" value="1-5" class="hidden custom-radio" required>
-                                    <label for="size-1" class="flex items-center justify-center p-3 rounded-xl border border-slate-700 bg-obsidian-950 text-xs font-semibold text-slate-300 cursor-pointer hover:border-slate-500 transition-all text-center">
-                                        1 – 5
-                                    </label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="teamSize" id="size-2" value="6-15" class="hidden custom-radio">
-                                    <label for="size-2" class="flex items-center justify-center p-3 rounded-xl border border-slate-700 bg-obsidian-950 text-xs font-semibold text-slate-300 cursor-pointer hover:border-slate-500 transition-all text-center">
-                                        6 – 15
-                                    </label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="teamSize" id="size-3" value="16-50" class="hidden custom-radio">
-                                    <label for="size-3" class="flex items-center justify-center p-3 rounded-xl border border-slate-700 bg-obsidian-950 text-xs font-semibold text-slate-300 cursor-pointer hover:border-slate-500 transition-all text-center">
-                                        16 – 50
-                                    </label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="teamSize" id="size-4" value="50+" class="hidden custom-radio">
-                                    <label for="size-4" class="flex items-center justify-center p-3 rounded-xl border border-slate-700 bg-obsidian-950 text-xs font-semibold text-slate-300 cursor-pointer hover:border-slate-500 transition-all text-center">
-                                        50+
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-300 mb-3">What main area do you need support with? *</label>
-                            <div class="space-y-2.5">
-                                <label class="flex items-center p-3 rounded-xl border border-slate-700 bg-obsidian-950 text-xs text-slate-300 cursor-pointer hover:border-slate-500 transition-colors">
-                                    <input type="radio" name="supportArea" value="Operations & Workflows" class="accent-gold-500 mr-3" required>
-                                    <span>Operations & Workflows (bottlenecks, SOPs, task clarity)</span>
-                                </label>
-                                <label class="flex items-center p-3 rounded-xl border border-slate-700 bg-obsidian-950 text-xs text-slate-300 cursor-pointer hover:border-slate-500 transition-colors">
-                                    <input type="radio" name="supportArea" value="Sales Process & Commercial Strategy" class="accent-gold-500 mr-3">
-                                    <span>Sales Process & Commercial Strategy</span>
-                                </label>
-                                <label class="flex items-center p-3 rounded-xl border border-slate-700 bg-obsidian-950 text-xs text-slate-300 cursor-pointer hover:border-slate-500 transition-colors">
-                                    <input type="radio" name="supportArea" value="Roles, Structure & Responsibilities" class="accent-gold-500 mr-3">
-                                    <span>Roles, Structure & Responsibilities</span>
-                                </label>
-                                <label class="flex items-center p-3 rounded-xl border border-slate-700 bg-obsidian-950 text-xs text-slate-300 cursor-pointer hover:border-slate-500 transition-colors">
-                                    <input type="radio" name="supportArea" value="Business Planning & Market Studies" class="accent-gold-500 mr-3">
-                                    <span>Business Planning & Market Studies</span>
-                                </label>
-                                <label class="flex items-center p-3 rounded-xl border border-slate-700 bg-obsidian-950 text-xs text-slate-300 cursor-pointer hover:border-slate-500 transition-colors">
-                                    <input type="radio" name="supportArea" value="Other" class="accent-gold-500 mr-3">
-                                    <span>Other Comprehensive Advisory</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="challengeDescription" class="block text-xs font-semibold text-slate-300 mb-2">Briefly describe the main challenge or bottleneck your business is facing right now *</label>
-                            <textarea id="challengeDescription" rows="4" required placeholder="Describe what isn't working smoothly, delays you are experiencing, team confusion, or targets that are not being achieved..." class="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-gold-400 text-sm transition-colors resize-none"></textarea>
+                            <label for="emailAddress" class="block text-xs font-medium text-slate-300 mb-1">Work Email *</label>
+                            <input type="email" id="emailAddress" required placeholder="name@company.com" class="w-full px-3.5 py-2.5 rounded-lg bg-obsidian-950 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-gold-400">
                         </div>
                     </div>
 
-                    <!-- Section 3: Contact Time Preference -->
-                    <div class="space-y-4">
-                        <label class="block text-xs font-semibold text-slate-300">When is the best time for us to contact you? *</label>
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                            <div>
-                                <input type="radio" name="contactTime" id="time-morning" value="Morning (9:00 AM – 12:00 PM)" class="hidden custom-radio" required>
-                                <label for="time-morning" class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-700 bg-obsidian-950 text-xs text-slate-300 cursor-pointer hover:border-slate-500 transition-all text-center">
-                                    <i class="fa-regular fa-sun text-gold-400 mb-1 text-sm"></i>
-                                    <span>Morning</span>
-                                    <span class="text-[10px] text-slate-500">9:00 AM – 12:00 PM</span>
-                                </label>
-                            </div>
-
-                            <div>
-                                <input type="radio" name="contactTime" id="time-afternoon" value="Afternoon (12:00 PM – 4:00 PM)" class="hidden custom-radio">
-                                <label for="time-afternoon" class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-700 bg-obsidian-950 text-xs text-slate-300 cursor-pointer hover:border-slate-500 transition-all text-center">
-                                    <i class="fa-solid fa-cloud-sun text-gold-400 mb-1 text-sm"></i>
-                                    <span>Afternoon</span>
-                                    <span class="text-[10px] text-slate-500">12:00 PM – 4:00 PM</span>
-                                </label>
-                            </div>
-
-                            <div>
-                                <input type="radio" name="contactTime" id="time-evening" value="Evening (4:00 PM – 7:00 PM)" class="hidden custom-radio">
-                                <label for="time-evening" class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-700 bg-obsidian-950 text-xs text-slate-300 cursor-pointer hover:border-slate-500 transition-all text-center">
-                                    <i class="fa-solid fa-moon text-gold-400 mb-1 text-sm"></i>
-                                    <span>Evening</span>
-                                    <span class="text-[10px] text-slate-500">4:00 PM – 7:00 PM</span>
-                                </label>
-                            </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="teamSize" class="block text-xs font-medium text-slate-300 mb-1">Team Size *</label>
+                            <select id="teamSize" required class="w-full px-3.5 py-2.5 rounded-lg bg-obsidian-950 border border-slate-700 text-white text-xs focus:outline-none focus:border-gold-400">
+                                <option value="1-5">1 – 5 team members</option>
+                                <option value="6-15" selected>6 – 15 team members</option>
+                                <option value="16-50">16 – 50 team members</option>
+                                <option value="50+">50+ team members</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="supportArea" class="block text-xs font-medium text-slate-300 mb-1">Primary Focus *</label>
+                            <select id="supportArea" required class="w-full px-3.5 py-2.5 rounded-lg bg-obsidian-950 border border-slate-700 text-white text-xs focus:outline-none focus:border-gold-400">
+                                <option value="Operations & Workflows">Operations & SOPs</option>
+                                <option value="Sales & Commercial">Sales Process & Pipeline</option>
+                                <option value="Roles & Accountability">Roles & Accountability</option>
+                                <option value="Monthly Retainer Advisory">Monthly Retainer Advisory</option>
+                            </select>
                         </div>
                     </div>
 
-                    <!-- Submission Actions -->
-                    <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
-                        <button type="submit" id="submit-btn" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 text-obsidian-950 font-bold uppercase tracking-wider text-xs shadow-xl shadow-gold-500/25 hover:brightness-110 active:scale-95 transition-all flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed">
-                            <span id="submit-btn-text">Submit Initial Assessment</span>
+                    <div>
+                        <label for="challengeDescription" class="block text-xs font-medium text-slate-300 mb-1">Main Challenge or Bottleneck *</label>
+                        <textarea id="challengeDescription" rows="3" required placeholder="Briefly describe what isn't running smoothly or what bottleneck you need to resolve..." class="w-full px-3.5 py-2.5 rounded-lg bg-obsidian-950 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-gold-400 resize-none"></textarea>
+                    </div>
+
+                    <div class="pt-2">
+                        <button type="submit" id="submit-btn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-gold-400 to-gold-600 text-obsidian-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:brightness-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+                            <span id="submit-btn-text">Submit Assessment</span>
                             <i id="submit-btn-icon" class="fa-solid fa-arrow-right text-xs"></i>
                         </button>
-                        <span class="text-[11px] text-slate-500 flex items-center gap-1.5">
-                            <i class="fa-solid fa-shield-halved text-gold-400 text-xs"></i>
-                            Delivered securely to Principal Consultant inbox.
-                        </span>
                     </div>
 
                 </form>
+
             </div>
 
         </div>
     </section>
 
-    <footer class="bg-obsidian-950 border-t border-gold-500/20 pt-16 pb-12 text-slate-400 text-xs">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-                
-                <!-- Col 1: Identity & Worldwide Reach -->
-                <div class="md:col-span-2">
-                    <div class="flex items-center gap-3.5 mb-4">
-                        <div class="relative w-10 h-10 shrink-0 rounded-lg overflow-hidden border border-gold-500/40 shadow-md">
-                            <img src="https://i.postimg.cc/m2yBQFxB/IMG-9339.jpg" alt="PRAXIS Logo" class="w-full h-full object-cover">
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="text-xl font-bold text-white font-serif tracking-widest uppercase leading-none">PRAXIS</span>
-                            <span class="text-[9px] tracking-[0.38em] text-gold-400 uppercase font-semibold mt-1">Consulting</span>
-                        </div>
-                    </div>
-                    <p class="text-slate-400 max-w-sm leading-relaxed mb-4">
-                        Operations and Business Consulting. Practical analysis that leads to direct action for growing businesses.
-                    </p>
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-obsidian-900 border border-gold-500/20 text-[11px] text-gold-300 font-medium tracking-wide">
-                        <i class="fa-solid fa-globe text-xs text-gold-400"></i>
-                        <span>Available to serve countries like <strong class="text-white font-semibold">KSA</strong>, the <strong class="text-white font-semibold">United Arab Emirates</strong>, and <strong class="text-white font-semibold">globally</strong></span>
-                    </div>
-                </div>
-
-                <!-- Col 2: Direct Contact Lines -->
-                <div>
-                    <h4 class="text-xs uppercase font-bold text-white tracking-widest mb-4">Direct Contact</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-center space-x-2.5">
-                            <i class="fa-solid fa-phone text-gold-400"></i>
-                            <a href="tel:+962775520081" class="hover:text-white transition-colors">+962 77 552 0081</a>
-                        </li>
-                        <li class="flex items-center space-x-2.5">
-                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
-                            <a href="https://wa.me/962775520081" target="_blank" class="hover:text-white transition-colors">+962 77 552 0081</a>
-                        </li>
-                        <li class="flex items-center space-x-2.5">
-                            <i class="fa-solid fa-envelope text-gold-400"></i>
-                            <a href="mailto:abdullah@praxis.com" class="hover:text-white transition-colors">abdullah@praxis.com</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Col 3: Practice Focus Areas -->
-                <div>
-                    <h4 class="text-xs uppercase font-bold text-white tracking-widest mb-4">Consulting Areas</h4>
-                    <ul class="space-y-2 text-slate-400">
-                        <li><a href="#services" class="hover:text-gold-300 transition-colors">Operational Audits & Diagnostics</a></li>
-                        <li><a href="#services" class="hover:text-gold-300 transition-colors">SOPs & Workflow Architecture</a></li>
-                        <li><a href="#services" class="hover:text-gold-300 transition-colors">KPI Frameworks & Accountability</a></li>
-                        <li><a href="#services" class="hover:text-gold-300 transition-colors">Sales & Commercial Strategy</a></li>
-                        <li><a href="#engagement" class="hover:text-gold-300 transition-colors">Executive Retainers</a></li>
-                    </ul>
-                </div>
-
+    <footer class="bg-obsidian-950 border-t border-slate-900 py-10 text-slate-500 text-xs text-center">
+        <div class="max-w-5xl mx-auto px-4 space-y-4">
+            <div class="flex items-center justify-center gap-3">
+                <span class="text-sm font-bold text-white font-serif tracking-widest uppercase">PRAXIS</span>
+                <span class="text-gold-400 font-semibold text-[10px] tracking-wider uppercase">Consulting</span>
             </div>
-
-            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 gap-4">
-                <p>&copy; <span id="current-year"></span> PRAXIS Consulting. All rights reserved.</p>
-                <p>Designed for high-performance operations and strategic clarity.</p>
+            <div class="flex flex-wrap items-center justify-center gap-6 text-slate-400 text-xs">
+                <a href="tel:+962775520081" class="hover:text-white transition-colors"><i class="fa-solid fa-phone text-gold-400 mr-1.5"></i>+962 77 552 0081</a>
+                <a href="mailto:abdullah@praxisjo.com" class="hover:text-white transition-colors"><i class="fa-solid fa-envelope text-gold-400 mr-1.5"></i>abdullah@praxisjo.com</a>
+                <span class="text-slate-400">Amman, Jordan &amp; Global</span>
             </div>
+            <p class="text-[11px] text-slate-600">&copy; <span id="current-year"></span> PRAXIS Consulting. All rights reserved.</p>
         </div>
     </footer>
 
-    <aside aria-label="WhatsApp Contact" class="fixed bottom-6 right-6 z-50 flex items-center group">
-        <a href="https://wa.me/962775520081?text=Hello%20PRAXIS%20Consulting,%20I%20would%20like%20to%20schedule%20an%20Initial%20Assessment%20session." target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 px-4 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs shadow-2xl hover:scale-105 active:scale-95 transition-all glow-gold" aria-label="Chat on WhatsApp">
-            <i class="fa-brands fa-whatsapp text-2xl text-white"></i>
-            <span class="hidden sm:inline-block tracking-wide">Direct WhatsApp Consultation</span>
-        </a>
-    </aside>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Set dynamic year
             document.getElementById('current-year').textContent = new Date().getFullYear();
 
-            // Mobile menu toggling
-            const mobileBtn = document.getElementById('mobile-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navIcon = document.getElementById('nav-icon');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
-
-            mobileBtn.addEventListener('click', () => {
-                const isHidden = mobileMenu.classList.contains('hidden');
-                if (isHidden) {
-                    mobileMenu.classList.remove('hidden');
-                    navIcon.classList.remove('fa-bars-staggered');
-                    navIcon.classList.add('fa-xmark');
-                } else {
-                    mobileMenu.classList.add('hidden');
-                    navIcon.classList.remove('fa-xmark');
-                    navIcon.classList.add('fa-bars-staggered');
-                }
-            });
-
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    navIcon.classList.remove('fa-xmark');
-                    navIcon.classList.add('fa-bars-staggered');
-                });
-            });
-
-            // Handle intake form submission via Web3Forms & Google Sheets
             const intakeForm = document.getElementById('praxis-intake-form');
             const successBanner = document.getElementById('assessment-success');
             const submitBtn = document.getElementById('submit-btn');
             const submitBtnText = document.getElementById('submit-btn-text');
             const submitBtnIcon = document.getElementById('submit-btn-icon');
 
-            // Live Google Apps Script Web App URL connected to your Google Sheet
-            const GOOGLE_SHEET_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbzKn_hYvCgnA5gVEDudllY-H8VWtdhuvSJiA_BZr1pZ0i0eH8HiGPGWv9aDkPjOKvC4/exec'; 
+            // Configured Google Sheet Web App endpoint
+            const GOOGLE_SHEET_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbzKn_hYvCgnA5gVEDudllY-H8VWtdhuvSJiA_BZr1pZ0i0eH8HiGPGWv9aDkPjOKvC4/exec';
 
             intakeForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
@@ -901,18 +410,15 @@
                 const companyName = document.getElementById('companyName').value.trim();
                 const phone = document.getElementById('phoneWhatsApp').value.trim();
                 const email = document.getElementById('emailAddress').value.trim();
-                
-                const teamSize = document.querySelector('input[name="teamSize"]:checked')?.value || 'Not specified';
-                const supportArea = document.querySelector('input[name="supportArea"]:checked')?.value || 'Not specified';
+                const teamSize = document.getElementById('teamSize').value;
+                const supportArea = document.getElementById('supportArea').value;
                 const challenge = document.getElementById('challengeDescription').value.trim();
-                const contactTime = document.querySelector('input[name="contactTime"]:checked')?.value || 'Flexible';
 
-                // Set loading state
                 submitBtn.disabled = true;
-                submitBtnText.textContent = 'Transmitting Briefing...';
+                submitBtnText.textContent = 'Submitting...';
                 submitBtnIcon.className = 'fa-solid fa-circle-notch fa-spin text-xs';
 
-                // Web3Forms payload for direct email delivery
+                // Web3Forms email delivery
                 const emailPayload = {
                     access_key: '72aef9cc-7524-41e0-8ef7-f83de4bd2611',
                     subject: `New PRAXIS Assessment: ${companyName} (${fullName})`,
@@ -923,11 +429,10 @@
                     Email: email,
                     Team_Size: teamSize,
                     Primary_Support_Area: supportArea,
-                    Preferred_Contact_Window: contactTime,
                     Main_Challenge_or_Bottleneck: challenge
                 };
 
-                // Google Sheets payload
+                // Google Sheets logging
                 const sheetPayload = {
                     fullName,
                     companyName,
@@ -936,70 +441,57 @@
                     teamSize,
                     supportArea,
                     challenge,
-                    contactTime
+                    contactTime: 'Direct'
                 };
 
                 try {
-                    // Send to Web3Forms (Email)
-                    const emailPromise = fetch('https://api.web3forms.com/submit', {
+                    const emailReq = fetch('https://api.web3forms.com/submit', {
                         method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        },
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                         body: JSON.stringify(emailPayload)
                     });
 
-                    // Send to Google Sheets (if URL configured)
-                    const sheetPromise = GOOGLE_SHEET_WEBAPP_URL
-                        ? fetch(GOOGLE_SHEET_WEBAPP_URL, {
-                            method: 'POST',
-                            mode: 'no-cors',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(sheetPayload)
-                          })
-                        : Promise.resolve();
+                    const sheetReq = fetch(GOOGLE_SHEET_WEBAPP_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(sheetPayload)
+                    });
 
-                    await Promise.allSettled([emailPromise, sheetPromise]);
+                    await Promise.allSettled([emailReq, sheetReq]);
 
-                    // Display success banner
                     successBanner.classList.remove('hidden');
                     successBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-                    // Construct WhatsApp message pre-fill
+                    // WhatsApp quick follow-up button
                     const whatsappMsg = encodeURIComponent(
-                        `*PRAXIS Initial Assessment Submitted*\n\n` +
+                        `*New PRAXIS Assessment Submitted*\n\n` +
                         `*Client:* ${fullName}\n` +
                         `*Company:* ${companyName}\n` +
                         `*Phone:* ${phone}\n` +
                         `*Email:* ${email}\n` +
                         `*Team Size:* ${teamSize}\n` +
-                        `*Area:* ${supportArea}\n` +
-                        `*Time:* ${contactTime}\n\n` +
-                        `*Bottleneck:* ${challenge}`
+                        `*Area:* ${supportArea}\n\n` +
+                        `*Challenge:* ${challenge}`
                     );
 
-                    const directWaLink = `https://wa.me/962775520081?text=${whatsappMsg}`;
-
-                    const existingBtn = document.getElementById('forward-to-wa-btn');
-                    if (!existingBtn) {
+                    if (!document.getElementById('forward-to-wa-btn')) {
                         const waBtn = document.createElement('a');
                         waBtn.id = 'forward-to-wa-btn';
-                        waBtn.href = directWaLink;
+                        waBtn.href = `https://wa.me/962775520081?text=${whatsappMsg}`;
                         waBtn.target = '_blank';
-                        waBtn.className = 'mt-3 inline-flex items-center text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 px-4 py-2.5 rounded-xl transition-all shadow-md';
-                        waBtn.innerHTML = '<i class="fa-brands fa-whatsapp mr-2 text-sm"></i> Also forward copy via WhatsApp (Instant)';
-                        successBanner.querySelector('div').appendChild(waBtn);
+                        waBtn.className = 'mt-3 inline-flex items-center text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 px-3.5 py-2 rounded-lg transition-all';
+                        waBtn.innerHTML = '<i class="fa-brands fa-whatsapp mr-1.5 text-sm"></i> Also forward copy via WhatsApp';
+                        successBanner.appendChild(waBtn);
                     }
 
                     intakeForm.reset();
                 } catch (err) {
-                    console.error('Submission error:', err);
+                    console.error('Error submitting:', err);
                     successBanner.classList.remove('hidden');
-                    successBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } finally {
                     submitBtn.disabled = false;
-                    submitBtnText.textContent = 'Submit Initial Assessment';
+                    submitBtnText.textContent = 'Submit Assessment';
                     submitBtnIcon.className = 'fa-solid fa-arrow-right text-xs';
                 }
             });

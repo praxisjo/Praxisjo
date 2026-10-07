@@ -884,22 +884,15 @@
                 });
             });
 
-            // Smooth header state
-            const mainNav = document.getElementById('main-nav');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 40) {
-                    mainNav.classList.add('bg-obsidian-950/95', 'shadow-2xl', 'border-gold-500/30');
-                } else {
-                    mainNav.classList.remove('bg-obsidian-950/95', 'shadow-2xl', 'border-gold-500/30');
-                }
-            });
-
-            // Handle intake form submission via Web3Forms
+            // Handle intake form submission via Web3Forms & Google Sheets
             const intakeForm = document.getElementById('praxis-intake-form');
             const successBanner = document.getElementById('assessment-success');
             const submitBtn = document.getElementById('submit-btn');
             const submitBtnText = document.getElementById('submit-btn-text');
             const submitBtnIcon = document.getElementById('submit-btn-icon');
+
+            // Live Google Apps Script Web App URL connected to your Google Sheet
+            const GOOGLE_SHEET_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbzKn_hYvCgnA5gVEDudllY-H8VWtdhuvSJiA_BZr1pZ0i0eH8HiGPGWv9aDkPjOKvC4/exec'; 
 
             intakeForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
@@ -919,8 +912,8 @@
                 submitBtnText.textContent = 'Transmitting Briefing...';
                 submitBtnIcon.className = 'fa-solid fa-circle-notch fa-spin text-xs';
 
-                // Payload for Web3Forms email delivery
-                const payload = {
+                // Web3Forms payload for direct email delivery
+                const emailPayload = {
                     access_key: '72aef9cc-7524-41e0-8ef7-f83de4bd2611',
                     subject: `New PRAXIS Assessment: ${companyName} (${fullName})`,
                     from_name: 'PRAXIS Web Portal',
@@ -934,17 +927,40 @@
                     Main_Challenge_or_Bottleneck: challenge
                 };
 
+                // Google Sheets payload
+                const sheetPayload = {
+                    fullName,
+                    companyName,
+                    phone,
+                    email,
+                    teamSize,
+                    supportArea,
+                    challenge,
+                    contactTime
+                };
+
                 try {
-                    const response = await fetch('https://api.web3forms.com/submit', {
+                    // Send to Web3Forms (Email)
+                    const emailPromise = fetch('https://api.web3forms.com/submit', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
                             'Accept': 'application/json'
                         },
-                        body: JSON.stringify(payload)
+                        body: JSON.stringify(emailPayload)
                     });
 
-                    const result = await response.json();
+                    // Send to Google Sheets (if URL configured)
+                    const sheetPromise = GOOGLE_SHEET_WEBAPP_URL
+                        ? fetch(GOOGLE_SHEET_WEBAPP_URL, {
+                            method: 'POST',
+                            mode: 'no-cors',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(sheetPayload)
+                          })
+                        : Promise.resolve();
+
+                    await Promise.allSettled([emailPromise, sheetPromise]);
 
                     // Display success banner
                     successBanner.classList.remove('hidden');
